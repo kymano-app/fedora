@@ -1,0 +1,8 @@
+systemVersion: repo/v1
+######################
+version: 0.1
+configs:
+  0:
+    version: 0.1
+    type: searchable
+    from: /fedora35-workstation:0.1
