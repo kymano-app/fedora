@@ -47,5 +47,3 @@ macos:
         layers:
           - hash: ca76c2ae023903d2378756f711887061b989673dc8ccb3f9ec821d67c2e796ad
             url: https://github.com/kymano-app/repo/releases/download/0.0.1/EFI_Code-AARCH64.img.tgz
-
-
