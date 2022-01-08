@@ -73,7 +73,7 @@ linux:
       - device: intel-hda
       - device: hda-duplex
       # - monitor: stdio
-      - display: sdl
+      - display: gtk
       - nic: user,model=virtio-net-pci
       - drive: if=pflash,format=raw,file=$edk2x8664code
       - drive: if=pflash,format=raw,file=$EFIVARS
