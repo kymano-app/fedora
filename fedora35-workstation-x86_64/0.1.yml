@@ -59,7 +59,7 @@ linux:
       #   commands: '-f'
     config:
       - machine: virt-6.2
-      - cpu: host,kvm=off
+      - cpu: conrtex-172
       - smp: 8
       - m: 4G
       - drive: if=pflash,format=raw,unit=0,file=$edk2x8664code,readonly=on
@@ -69,7 +69,7 @@ linux:
       - device: qemu-xhci
       - device: usb-kbd
       - device: usb-tablet
-      - device: virtio-ramfb
+      - device: ramfb
       - drive: file=$system,if=none,id=boot,cache=writethrough
       - device: nvme,drive=boot,serial=boot
       - device: intel-hda
