@@ -60,7 +60,7 @@ linux:
       # LD_LIBRARY_PATH=/root/.local/share/kymano/qemu/6.2.0-linux-x86_64/libs /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/libs/ld-linux-x86-64.so.2 /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/bin/qemu-system-aarch64 -L /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/share/qemu -machine virt -smp 8 -m 4G -boot order=c -drive file=/root/.local/share/kymano/user_layers/u21/system.qcow2  -nic user,model=virtio-net-pci -cpu cortex-a57 -device ramfb -drive file=flash0.img,format=raw,if=pflash -drive file=flash1.img,format=raw,if=pflash
     config:
       - machine: virt
-      - cpu: cortex-a57
+      - cpu: cortex-a72
       - smp: 8
       - m: 4G
       - boot: order=c
