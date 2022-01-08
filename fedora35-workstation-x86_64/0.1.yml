@@ -58,7 +58,7 @@ linux:
       #   version: 11.0
       #   commands: '-f'
     config:
-      - machine: q35
+      - machine: virt-6.2
       - cpu: host,kvm=off
       - smp: 8
       - m: 4G
