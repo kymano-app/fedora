@@ -59,7 +59,7 @@ linux:
       #   commands: '-f'
     config:
       - machine: virt-6.2
-      - cpu: conrtex-172
+      - cpu: conrtex-a72
       - smp: 8
       - m: 4G
       - drive: if=pflash,format=raw,unit=0,file=$edk2x8664code,readonly=on
