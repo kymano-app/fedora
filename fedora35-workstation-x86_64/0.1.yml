@@ -84,7 +84,7 @@ linux:
             url: https://github.com/kymano-app/repo/releases/download/fedora36-workstation/fedora36-workstation-1.qcow2.tgz
       - name: EFIVARS
         layers:
-          - hash: fa7dc16132dd58d384dc7bcec4ef357124e19ffc9fbb315183549dac63e9f536
+          - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
             url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.fd.tgz
       - name: edk2x8664code
         layers:
