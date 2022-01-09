@@ -46,7 +46,7 @@ macos:
       - name: edk2x8664code
         layers:
           - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.fd.tgz
+            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.tgz
 
 linux:
   local:
@@ -90,4 +90,4 @@ linux:
       - name: edk2x8664code
         layers:
           - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.fd.tgz
+            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.tgz
