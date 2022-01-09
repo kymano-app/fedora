@@ -42,7 +42,7 @@ macos:
       - name: EFIVARS
         layers:
           - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.fd.tgz
+            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.tgz
       - name: edk2x8664code
         layers:
           - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
@@ -86,7 +86,7 @@ linux:
       - name: EFIVARS
         layers:
           - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.fd.tgz
+            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.tgz
       - name: edk2x8664code
         layers:
           - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
