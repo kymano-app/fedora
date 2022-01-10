@@ -39,7 +39,7 @@ macos:
           type: system
           layers:
             - hash: 95039522f9b8f06c06cd9f43dbdb9ec627e50a48217212e56f0e8ed43fa4434a
-              url: https://github.com/kymano-app/repo/releases/download/fedora36-workstation/fedora36-workstation-1.qcow2.tgz
+              url: https://github.com/kymano-app/fedora/releases/download/fedora36-workstation/fedora36-workstation-arm64-1.tgz
         - name: EFIVARS
           layers:
             - hash: b3b855c5a80310168051164986855692d1bdb06e67619856177965cd87c6774f
