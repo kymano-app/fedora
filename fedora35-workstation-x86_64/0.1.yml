@@ -1,7 +1,7 @@
 systemVersion: config/v1
 ######################
 name: u21
-arch: arm64
+arch: x86_64
 
 macos:
   local:
