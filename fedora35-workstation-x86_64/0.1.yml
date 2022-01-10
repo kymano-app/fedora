@@ -14,7 +14,7 @@ macos:
       #   commands: '-f'
     config:
       - machine: q35
-      - cpu: host
+      - cpu: max
       - smp: 8
       - m: 4G
       - drive: if=pflash,format=raw,unit=0,file=$edk2x8664code,readonly=on
