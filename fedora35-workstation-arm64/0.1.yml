@@ -43,8 +43,8 @@ macos:
         - name: EFIVARS
           layers:
             - hash: b3b855c5a80310168051164986855692d1bdb06e67619856177965cd87c6774f
-              url: https://github.com/kymano-app/repo/releases/download/0.0.1/EFI_VARS.img.tgz
+              url: https://github.com/kymano-app/repo/releases/download/0.0.1/EFI_VARS.tgz
         - name: EFICodeAARCH64
           layers:
             - hash: ca76c2ae023903d2378756f711887061b989673dc8ccb3f9ec821d67c2e796ad
-              url: https://github.com/kymano-app/repo/releases/download/0.0.1/EFI_Code-AARCH64.img.tgz
+              url: https://github.com/kymano-app/repo/releases/download/0.0.1/EFI_Code-AARCH64.tgz
