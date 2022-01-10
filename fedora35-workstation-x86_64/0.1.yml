@@ -5,89 +5,91 @@ arch: x86_64
 
 macos:
   local:
-    qemu: 6.2.0-gpu-sdl # https://github.com/kymano-app/qemu/releases/download/6.2.0-cocoa/qemu-6.2.0-cocoa-macos-x86_64.tgz
-    #open:
-      #cocoa:
-      #  commands: '-f'
-      # remote-viewer:
-      #   version: 11.0
-      #   commands: '-f'
-    config:
-      - machine: q35
-      - cpu: max
-      - accel: tcg,tb-size=1024
-      - smp: 8
-      - m: 4G
-   #   - drive: if=pflash,format=raw,unit=0,file=$edk2x8664code,readonly=on
-   #   - drive: if=pflash,format=raw,unit=1,file=$EFIVARS
-      - boot: menu=on 
-     # - serial: stdio
-      - device: qemu-xhci
-      - device: usb-kbd
-      - device: usb-tablet
-      - device: virtio-ramfb
-      - drive: file=$system,if=none,id=boot,cache=writethrough
-      - device: nvme,drive=boot,serial=boot
-      - device: intel-hda
-      - device: hda-duplex
-      - display: sdl
-      # - monitor: stdio
-      - nic: user,model=virtio-net-pci
-    drives:
-      - name: system
-        type: system
-        layers:
-          - hash: 33ab095c1e6ceb84ba1e34003a09036c381e4a020aabe3b542371b4f8d61cfc8
-            url: https://github.com/kymano-app/fedora/releases/download/fedora35-workstation/fedora35-workstation-x86_64-1.tgz
-      - name: EFIVARS
-        layers:
-          - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.tgz
-      - name: edk2x8664code
-        layers:
-          - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.tgz
+    emulation:
+      qemu: 6.2.0-gpu-sdl # https://github.com/kymano-app/qemu/releases/download/6.2.0-cocoa/qemu-6.2.0-cocoa-macos-x86_64.tgz
+      #open:
+        #cocoa:
+        #  commands: '-f'
+        # remote-viewer:
+        #   version: 11.0
+        #   commands: '-f'
+      config:
+        - machine: q35
+        - cpu: max
+        - accel: tcg,tb-size=1024
+        - smp: 8
+        - m: 4G
+    #   - drive: if=pflash,format=raw,unit=0,file=$edk2x8664code,readonly=on
+    #   - drive: if=pflash,format=raw,unit=1,file=$EFIVARS
+        - boot: menu=on 
+      # - serial: stdio
+        - device: qemu-xhci
+        - device: usb-kbd
+        - device: usb-tablet
+        - device: virtio-ramfb
+        - drive: file=$system,if=none,id=boot,cache=writethrough
+        - device: nvme,drive=boot,serial=boot
+        - device: intel-hda
+        - device: hda-duplex
+        - display: sdl
+        # - monitor: stdio
+        - nic: user,model=virtio-net-pci
+      drives:
+        - name: system
+          type: system
+          layers:
+            - hash: 33ab095c1e6ceb84ba1e34003a09036c381e4a020aabe3b542371b4f8d61cfc8
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-workstation/fedora35-workstation-x86_64-1.tgz
+        - name: EFIVARS
+          layers:
+            - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
+              url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.tgz
+        - name: edk2x8664code
+          layers:
+            - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
+              url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.tgz
 
 linux:
   local:
-    qemu: 6.2.0
-    #open:
-      #cocoa:
-      #  commands: '-f'
-      # remote-viewer:
-      #   version: 11.0
-      #   commands: '-f'
-      # LD_LIBRARY_PATH=/root/.local/share/kymano/qemu/6.2.0-linux-x86_64/libs /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/libs/ld-linux-x86-64.so.2 /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/bin/qemu-system-aarch64 -L /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/share/qemu -machine virt -smp 8 -m 4G -boot order=c -drive file=/root/.local/share/kymano/user_layers/u21/system.qcow2  -nic user,model=virtio-net-pci -cpu cortex-a57 -device ramfb -drive file=flash0.img,format=raw,if=pflash -drive file=flash1.img,format=raw,if=pflash
-    config:
-      - machine: virt
-      - cpu: cortex-a72
-      - smp: 8
-      - m: 4G
-      - boot: order=c
-     # - serial: stdio
-      - device: qemu-xhci
-      - device: usb-kbd
-      - device: usb-tablet
-      - device: ramfb
-      - drive: file=$system
-      - device: intel-hda
-      - device: hda-duplex
-      # - monitor: stdio
-      - display: gtk
-      - nic: user,model=virtio-net-pci
-      - drive: if=pflash,format=raw,file=$edk2x8664code
-      - drive: if=pflash,format=raw,file=$EFIVARS
-    drives:
-      - name: system
-        type: system
-        layers:
-          - hash: 33ab095c1e6ceb84ba1e34003a09036c381e4a020aabe3b542371b4f8d61cfc8
-            url: https://github.com/kymano-app/fedora/releases/download/fedora35-workstation/fedora35-workstation-x86_64-1.tgz
-      - name: EFIVARS
-        layers:
-          - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.tgz
-      - name: edk2x8664code
-        layers:
-          - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
-            url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.tgz
+    virtualization:
+      qemu: 6.2.0
+      #open:
+        #cocoa:
+        #  commands: '-f'
+        # remote-viewer:
+        #   version: 11.0
+        #   commands: '-f'
+        # LD_LIBRARY_PATH=/root/.local/share/kymano/qemu/6.2.0-linux-x86_64/libs /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/libs/ld-linux-x86-64.so.2 /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/bin/qemu-system-aarch64 -L /root/.local/share/kymano/qemu/6.2.0-linux-x86_64/share/qemu -machine virt -smp 8 -m 4G -boot order=c -drive file=/root/.local/share/kymano/user_layers/u21/system.qcow2  -nic user,model=virtio-net-pci -cpu cortex-a57 -device ramfb -drive file=flash0.img,format=raw,if=pflash -drive file=flash1.img,format=raw,if=pflash
+      config:
+        - machine: virt
+        - cpu: cortex-a72
+        - smp: 8
+        - m: 4G
+        - boot: order=c
+      # - serial: stdio
+        - device: qemu-xhci
+        - device: usb-kbd
+        - device: usb-tablet
+        - device: ramfb
+        - drive: file=$system
+        - device: intel-hda
+        - device: hda-duplex
+        # - monitor: stdio
+        - display: gtk
+        - nic: user,model=virtio-net-pci
+        - drive: if=pflash,format=raw,file=$edk2x8664code
+        - drive: if=pflash,format=raw,file=$EFIVARS
+      drives:
+        - name: system
+          type: system
+          layers:
+            - hash: 33ab095c1e6ceb84ba1e34003a09036c381e4a020aabe3b542371b4f8d61cfc8
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-workstation/fedora35-workstation-x86_64-1.tgz
+        - name: EFIVARS
+          layers:
+            - hash: 7b1be2f8995576ed6dd6f48848c8d4d61c5be6225beb67cbc2c50f07d65e62c3
+              url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI_VARS.tgz
+        - name: edk2x8664code
+          layers:
+            - hash: d0163a80a031b24af79c67821c5c527c3d9ab4bf98f77c17f39a6af464c11d92
+              url: https://github.com/kymano-app/repo/releases/download/0.0.1/QEMU_EFI.tgz
