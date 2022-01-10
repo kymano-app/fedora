@@ -1,6 +1,6 @@
 systemVersion: config/v1
 ######################
-name: u21
+name: fedora35-workstation-arm64
 arch: arm64
 
 macos:
