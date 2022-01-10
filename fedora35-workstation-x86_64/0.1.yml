@@ -13,7 +13,7 @@ macos:
       #   version: 11.0
       #   commands: '-f'
     config:
-      - machine: virt-6.2,highmem=off
+      - machine: q35
       - accel: hvf
       - cpu: host
       - smp: 8
