@@ -26,7 +26,7 @@ macos:
         - device: qemu-xhci
         - device: usb-kbd
         - device: usb-tablet
-        - device: virtio-ramfb
+        - device: ramfb
         - drive: file=$system,if=none,id=boot,cache=writethrough
         - device: nvme,drive=boot,serial=boot
         - device: intel-hda
