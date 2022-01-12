@@ -16,16 +16,16 @@ macos:
         - drive: if=pflash,format=raw,unit=0,file=$OVMFCODE,readonly=on
         #- drive: if=pflash,format=raw,unit=1,file=$OVMFVARS
         - boot: order=c
-      # - serial: stdio
+        - serial: stdio
         - device: qemu-xhci
         - device: usb-kbd
         - device: usb-tablet
-        - device: virtio-ramfb
+      #  - device: virtio-ramfb
         - drive: file=$system,cache=writethrough
         #- device: nvme,drive=boot,serial=boot
         - device: intel-hda
         - device: hda-duplex
-        - display: sdl
+        - display: none
         # - monitor: stdio
         - nic: user,model=virtio-net-pci
       drives:
