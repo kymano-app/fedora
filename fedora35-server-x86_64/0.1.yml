@@ -21,7 +21,7 @@ macos:
         - device: usb-kbd
         - device: usb-tablet
         - device: virtio-ramfb
-        - drive: file=$system,if=none,cache=writethrough
+        - drive: file=$system
         - device: intel-hda
         - device: hda-duplex
         - display: sdl
