@@ -15,7 +15,7 @@ macos:
         - m: 4G
         - drive: if=pflash,format=raw,unit=0,file=$OVMFCODE,readonly=on
         - drive: if=pflash,format=raw,unit=1,file=$OVMFVARS
-        - boot: menu=on 
+        - boot: order=c
       # - serial: stdio
         - device: qemu-xhci
         - device: usb-kbd
@@ -64,8 +64,8 @@ macos:
         - name: system
           type: system
           layers:
-            - hash: 33ab095c1e6ceb84ba1e34003a09036c381e4a020aabe3b542371b4f8d61cfc8
-              url: https://github.com/kymano-app/fedora/releases/download/fedora35-workstation/fedora35-workstation-x86_64-1.tgz
+            - hash: 4d14ff88e401762fae01b8d90e1a8366abb521c6b2a49e5206b489d44b809d2f
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server.tgz
         - name: OVMFVARS
           layers:
             - hash: bebeab94d6ae3cd119450da144b7089181e89675bbaf136745bb6ae3b7de52bd
