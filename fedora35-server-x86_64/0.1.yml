@@ -94,7 +94,7 @@ linux:
         - drive: file=$system,cache=writethrough
         - device: intel-hda
         - device: hda-duplex
-        # - monitor: stdio
+        - monitor: stdio
         - display: none
         - nic: user,model=virtio-net-pci
         - drive: if=pflash,format=raw,file=$OVMFCODE
