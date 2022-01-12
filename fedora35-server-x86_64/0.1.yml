@@ -10,7 +10,7 @@ macos:
       config:
         - machine: q35
         #- cpu: max
-       # - accel: tcg,tb-size=1024
+        - accel: tcg,tb-size=128
         - smp: 8
         - m: 4G
         - drive: if=pflash,format=raw,unit=0,file=$OVMFCODE,readonly=on
