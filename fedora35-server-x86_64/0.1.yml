@@ -25,7 +25,7 @@ macos:
         - device: nvme,drive=boot,serial=boot
         - device: intel-hda
         - device: hda-duplex
-        - display: nonу
+        - display: none
         # - monitor: stdio
         - nic: user,model=virtio-net-pci
       drives:
