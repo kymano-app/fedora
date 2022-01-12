@@ -103,7 +103,7 @@ linux:
       drives:
         - name: system
           type: system
-           layers:
+          layers:
             - hash: 4d14ff88e401762fae01b8d90e1a8366abb521c6b2a49e5206b489d44b809d2f
               url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server.tgz
         - name: OVMFVARS
