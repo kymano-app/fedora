@@ -100,6 +100,7 @@ linux:
         - drive: if=pflash,format=raw,file=$OVMFCODE
         - drive: if=pflash,format=raw,file=$OVMFVARS
         - vnc: :1
+        - qmp: tcp:localhost:4444,server=on,wait=off
       drives:
         - name: system
           type: system
