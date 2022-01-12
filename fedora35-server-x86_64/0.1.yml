@@ -9,7 +9,7 @@ macos:
       qemu: 6.2.0-gpu-sdl
       config:
         - machine: q35
-        - cpu: max
+        #- cpu: max
         - accel: tcg,tb-size=1024
         - smp: 8
         - m: 4G
@@ -21,11 +21,11 @@ macos:
         - device: usb-kbd
         - device: usb-tablet
       #  - device: virtio-ramfb
-        - drive: file=$system,cache=writethrough
-        #- device: nvme,drive=boot,serial=boot
+        - drive: file=$system,cache=writethrough,if=none
+        - device: nvme,drive=boot,serial=boot
         - device: intel-hda
         - device: hda-duplex
-        - display: none
+        - display: nonу
         # - monitor: stdio
         - nic: user,model=virtio-net-pci
       drives:
