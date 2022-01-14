@@ -13,4 +13,4 @@ configs:
   2:
     version: 0.1
     type: searchable
-    from: /fedora35-server:0.1
+    from: /fedora35-server-x86_64:0.1
