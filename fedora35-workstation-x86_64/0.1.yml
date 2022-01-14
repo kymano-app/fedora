@@ -1,7 +1,5 @@
 systemVersion: config/v1
 ######################
-name: fedora35-workstation-x86_64
-arch: x86_64
 
 macos:
   local:
