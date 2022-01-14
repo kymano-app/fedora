@@ -40,6 +40,9 @@ macos:
           layers:
             - hash: 2a1e6535699d8984fdf6379cfaeecd9fc47d894ae4c753d5f2a3ea9671621e35
               url: https://github.com/kymano-app/repo/releases/download/0.0.1/x86_64_OVMF_CODE.tgz
+      snapshot:
+        - hash: a5312a516d2a993b5671db548738e88e222b1120bd12c75265eb4c2fff678912
+          url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-snapshot.tgz
     virtualization:
       qemu: 6.2.0-gpu-sdl
       config:
