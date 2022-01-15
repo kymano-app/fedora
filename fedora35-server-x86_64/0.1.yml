@@ -35,7 +35,7 @@ macos:
           type: system
           layers:
             - hash: 4d14ff88e401762fae01b8d90e1a8366abb521c6b2a49e5206b489d44b809d2f
-              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-x86_64.tgz
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server.tgz
         - name: OVMFVARS
           layers:
             - hash: bebeab94d6ae3cd119450da144b7089181e89675bbaf136745bb6ae3b7de52bd
@@ -68,7 +68,7 @@ macos:
           type: system
           layers:
             - hash: 4d14ff88e401762fae01b8d90e1a8366abb521c6b2a49e5206b489d44b809d2f
-              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-x86_64.tgz
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server.tgz
         - name: OVMFVARS
           layers:
             - hash: bebeab94d6ae3cd119450da144b7089181e89675bbaf136745bb6ae3b7de52bd
@@ -112,7 +112,7 @@ linux:
           type: system
           layers:
             - hash: 4d14ff88e401762fae01b8d90e1a8366abb521c6b2a49e5206b489d44b809d2f
-              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-x86_64.tgz
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server.tgz
         - name: OVMFVARS
           layers:
             - hash: bebeab94d6ae3cd119450da144b7089181e89675bbaf136745bb6ae3b7de52bd
