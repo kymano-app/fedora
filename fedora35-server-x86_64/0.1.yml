@@ -89,7 +89,7 @@ linux:
         - cpu: host
         - smp: 8
         - m: 4G
-        - monitor: telnet:127.0.0.1:4445,server,nowait
+        - monitor: telnet:127.0.0.1:4444,server,nowait
         - boot: order=c
         - serial: stdio
         - device: qemu-xhci
