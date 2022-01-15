@@ -94,11 +94,11 @@ linux:
         - device: qemu-xhci
         - device: usb-kbd
         - device: usb-tablet
-       # - device: ramfb
+        - device: ramfb
         - drive: file=$system,cache=writethrough
         - device: intel-hda
         - device: hda-duplex
-        - display: curses
+        - display: none
         - nic: user,model=virtio-net-pci
         - drive: if=pflash,format=raw,file=$OVMFCODE,readonly=on
         - drive: if=pflash,format=raw,file=$OVMFVARS,readonly=on
