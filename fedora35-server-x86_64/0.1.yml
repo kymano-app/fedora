@@ -89,7 +89,7 @@ linux:
         - smp: 8
         - m: 4G
         - boot: order=c
-       - serial: stdio
+        - serial: stdio
         - device: qemu-xhci
         - device: usb-kbd
         - device: usb-tablet
