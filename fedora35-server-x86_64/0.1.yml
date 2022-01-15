@@ -101,7 +101,7 @@ linux:
         - nic: user,model=virtio-net-pci
         - drive: if=pflash,format=raw,file=$OVMFCODE,readonly=on
         - drive: if=pflash,format=raw,file=$OVMFVARS,readonly=on
-        - vnc: :1
+       # - vnc: :1
         - monitor: telnet:localhost:4444,server,nowait
       drives:
         - name: system
