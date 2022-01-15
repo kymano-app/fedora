@@ -27,6 +27,7 @@ macos:
         # - monitor: stdio
         - nic: user,model=virtio-net-pci
         - monitor: telnet:localhost:4444,server,nowait
+        - vnc: :0
       drives:
         - name: system
           type: system
