@@ -103,7 +103,7 @@ linux:
         - drive: if=pflash,format=raw,file=$OVMFCODE,readonly=on
         - drive: if=pflash,format=raw,file=$OVMFVARS,readonly=on
         - vnc: :1
-        - monitor: telnet:localhost:5555,server,nowait
+        - monitor: telnet:localhost:4444,server,nowait
       drives:
         - name: system
           type: system
@@ -120,4 +120,5 @@ linux:
               url: https://github.com/kymano-app/repo/releases/download/0.0.1/x86_64_OVMF_CODE.tgz
       snapshot:
         hash: a5312a516d2a993b5671db548738e88e222b1120bd12c75265eb4c2fff678912
+        tag: vm-20220112190456
         url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-snapshot-x86_64.tgz
