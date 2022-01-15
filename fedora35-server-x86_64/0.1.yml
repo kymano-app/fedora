@@ -32,7 +32,7 @@ macos:
           type: system
           layers:
             - hash: 4d14ff88e401762fae01b8d90e1a8366abb521c6b2a49e5206b489d44b809d2f
-              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server.tgz
+              url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-x86_64.tgz
         - name: OVMFVARS
           layers:
             - hash: bebeab94d6ae3cd119450da144b7089181e89675bbaf136745bb6ae3b7de52bd
@@ -44,7 +44,7 @@ macos:
       snapshot:
         hash: a5312a516d2a993b5671db548738e88e222b1120bd12c75265eb4c2fff678912
         tag: vm-20220112190456
-        url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-snapshot.tgz
+        url: https://github.com/kymano-app/fedora/releases/download/fedora35-server/fedora35-server-snapshot-x86_64.tgz
     virtualization:
       qemu: 6.2.0-gpu-sdl
       config:
