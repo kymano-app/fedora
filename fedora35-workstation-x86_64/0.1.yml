@@ -125,7 +125,6 @@ windows:
       qemu: 6.2.0-windows
       config:
         - machine: q35
-        - accel: whpx
         - cpu: host
         - smp: 8
         - m: 4G
