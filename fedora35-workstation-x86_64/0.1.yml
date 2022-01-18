@@ -127,7 +127,7 @@ windows:
         - machine: q35
         - cpu: max
         - smp: 4
-        - accel: whpx,kernel-irqchip=off 
+        #- accel: whpx,kernel-irqchip=off 
         - m: 4G
         - boot: order=c
       # - serial: stdio
