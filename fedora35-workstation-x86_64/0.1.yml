@@ -126,7 +126,8 @@ windows:
       config:
         - machine: q35
         - cpu: max
-        - smp: 8
+        - smp: 4
+        - accel: hax
         - m: 4G
         - boot: order=c
       # - serial: stdio
