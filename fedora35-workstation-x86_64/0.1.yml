@@ -125,7 +125,7 @@ windows:
       qemu: 6.2.0-windows
       config:
         - machine: q35
-        - cpu: host
+        - cpu: max
         - smp: 8
         - m: 4G
         - boot: order=c
