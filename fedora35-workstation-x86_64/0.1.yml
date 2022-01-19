@@ -141,8 +141,8 @@ windows:
         # - monitor: stdio
         # - display: none
         - nic: user,model=virtio-net-pci
-        - drive: if=pflash,format=raw,file=$OVMFCODE
-        - drive: if=pflash,format=raw,file=$OVMFVARS
+        #- drive: if=pflash,format=raw,file=$OVMFCODE
+        #- drive: if=pflash,format=raw,file=$OVMFVARS
       drives:
         - name: system
           type: system
