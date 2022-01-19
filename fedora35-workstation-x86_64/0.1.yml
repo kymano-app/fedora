@@ -125,7 +125,7 @@ windows:
       qemu: 6.2.0-win
       config:
         - machine: q35
-        - cpu: Cascadelake-Server
+        - cpu: qemu64,vmx=on
         - smp: 4
         - accel: whpx,kernel-irqchip=off 
         - m: 4G
