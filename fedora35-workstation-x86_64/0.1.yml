@@ -125,9 +125,9 @@ windows:
       qemu: 6.2.0-win
       config:
         - machine: q35
-        - cpu: max
+        - cpu: Cascadelake-Server
         - smp: 4
-        #- accel: whpx,kernel-irqchip=off 
+        - accel: whpx,kernel-irqchip=off 
         - m: 4G
         - boot: order=c
       # - serial: stdio
