@@ -1,4 +1,5 @@
 systemVersion: config/v1
+picture: https://getfedora.org/static/images/g-monitoring.png
 ######################
 
 macos:
