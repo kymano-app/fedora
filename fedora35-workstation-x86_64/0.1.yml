@@ -1,4 +1,5 @@
 systemVersion: config/v1
+picture: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Fedora-logo.svg/2048px-Fedora-logo.svg.png
 ######################
 
 macos:
