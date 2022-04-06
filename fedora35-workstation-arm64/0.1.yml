@@ -34,7 +34,7 @@ macos:
         - display: sdl
         # - monitor: stdio
         - nic: user,model=virtio-net-pci
-        - monitor: tcp:localhost:5551,server,nowait
+        - monitor: unix:socket[name=monitor],server,nowait
       drives:
         - name: system
           type: system
