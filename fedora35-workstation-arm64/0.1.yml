@@ -33,7 +33,8 @@ macos:
         - device: hda-duplex
         - display: sdl
         # - monitor: stdio
-        - nic: user,model=virtio-net-pci
+        - device: e1000,mac=6E:B7:A2:0E:3D:11,netdev=net0 
+        - netdev: vmnet-macos,mode=shared,id=net0
         - monitor: unix:socket[name=monitor],server,nowait
       drives:
         - name: system
